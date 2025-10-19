@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白色封皮 中文排版需求</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "PingFang SC", "Noto Sans SC" , "Microsoft YaHei", "SimSun", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            min-height: 100vh;
+            padding: 40px 50px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eaecef;
+        }
+        
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eaecef;
+        }
+        
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 25px 0 12px 0;
+        }
+        
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+        
+        blockquote {
+            background-color: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+            padding: 15px 20px;
+            margin: 20px 0;
+            color: #555;
+            font-style: italic;
+        }
+        
+        blockquote p {
+            margin-bottom: 0;
+        }
+        
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #eaecef;
+            margin: 30px 0;
+        }
+        
+        ol, ul {
+            margin: 15px 0 15px 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        code {
+            background-color: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+            font-size: 0.9em;
+            color: #d63200;
+        }
+        
+        .font-demo {
+            display: block;
+            margin: 15px 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        
+        .toc {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .toc ol {
+            margin-left: 20px;
+        }
+        
+        .toc li {
+            margin-bottom: 6px;
+        }
+        
+        .references {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .references ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+        
+        .references li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            text-indent: -15px;
+        }
+        
+        .references li:before {
+            content: "•";
+            color: #4a90e2;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>白色封皮 中文排版需求</h1>
+        
+        <blockquote>
+            <p>根据《W3C 中文排版需求》（<a href="https://www.w3.org/TR/clerq/">Requirements for Chinese Text Layout 中文排版需求</a>）以及中国大陆地区、中国台湾地区、中国香港地区等地有关排版习惯制订，并针对所有本社团发表文章进行约束。</p>
+        </blockquote>
+        
+        <hr>
+        
+        <div class="toc">
+            <h2>目录</h2>
+            
+            <ol>
+                <li><a href="#背景">背景 Background</a></li>
+                <li><a href="#具体规则">具体规则 Specific rules</a>
+                    <ol>
+                        <li><a href="#中文排版常用字体">中文排版常用字体 Common fonts for Chinese typesetting</a></li>
+                        <li><a href="#中西文混合排版要求">中西文混合排版要求 Requirements for mixed Chinese and Western typesetting</a>
+                            <ol>
+                                <li><a href="#空格">空格 Space</a></li>
+                                <li><a href="#间距">间距 Tracking</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#文本对齐">文本对齐 Text alignment &amp; justification</a></li>
+                        <li><a href="#文本间距调整">文本间距调整 Text spacing</a>
+                            <ol>
+                                <li><a href="#行间距">行间距 Line spacing</a></li>
+                                <li><a href="#段间距">段间距 Paragraph spacing</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+            
+            <p><a href="#参考文献">参考文献 References</a></p>
+        </div>
+        
+        <h2 id="背景">背景</h2>
+        
+        <p>由于长期以来我社团在微信公众号发表的文章大都有排版缺乏规范的缺点，为了正式且彻底解决本问题，特根据《W3C 中文排版需求》起草本文档，文档分发之日开始执行（即 2025 年 10 月 19 日）。</p>
+        
+        <h2 id="具体规则">具体规则</h2>
+        
+        <p>以下在排版实践上需要注意且遵守的具体规则：</p>
+        
+        <h3 id="中文排版常用字体">中文排版常用字体</h3>
+        
+        <p>中文排版常用字体有宋体（又称明体/明朝）、黑体（又称方体，日本称其为"哥特体"）、仿宋、楷体（又称真书），以下是字体示例：</p>
+        
+        <span class="font-demo" style="font-family: 'STSong', serif; font-size: 20px;">华文宋体 SinoType Song；</span>
+        <span class="font-demo" style="font-family: 'STXihei', sans-serif; font-size: 20px;">华文细黑 SinoType Xihei；</span>
+        <span class="font-demo" style="font-family: 'STFangsong', serif; font-size: 20px;">华文仿宋 SinoType Fangsong；</span>
+        <span class="font-demo" style="font-family: 'STKaiti', serif; font-size: 20px;">华文楷体 SinoType Kaiti；</span>
+        
+        <p>其中，需要注意以上字体的使用场景：</p>
+        
+        <ol>
+            <li><strong>宋体</strong>，衬线字体，适合适用于正文，常见于书籍出版、文件印制等正式领域，香港地区的公文常使用宋体风格的<strong>细明体</strong>/<strong>新细明体</strong>进行书写、印制、分发；</li>
+            <li><strong>黑体</strong>，无衬线字体，在书籍出版、公文等领域常见于标题与小标题，或单纯表示强调，但随着互联网出版的发展，黑体及该风格的无衬线字体亦常见于正文；</li>
+            <li><strong>仿宋</strong>，中国大陆地区长期使用此字体用作公文排版，并在《党政机关公文处理条例》、《党政机关公文格式》（GB/T 9704-2012）中做出规范，除此用途外，亦可以适用于古籍出版或古诗词排版等领域；</li>
+            <li><strong>楷体</strong>，中国大陆地区公文中将楷体视为二级小标题、签发人标识等处的指定字体，中国台湾地区要求使用楷体风格的标楷体作各种公文排版的标准字体（详细参见<a href="https://www.rootlaw.com.tw/LawArticle.aspx?LawID=A040180001003400-1050401">政府文書格式參考規範</a>），中国澳门地区政府部门亦使用此字体进行文书排版。</li>
+        </ol>
+        
+        <h3 id="中西文混合排版要求">中西文混合排版要求</h3>
+        
+        <p>以下是中西文混合排版要求：</p>
+        
+        <h4 id="空格">空格</h4>
+        
+        <p>凡是中文字符与西文字符、数字进行混合排版时，均需要在字符之间插入一个空格，HTML 中可使用 <code>&lt;letter-spacing&gt;</code> 标签进行调整，使用富文本编辑器、文字处理软件的，需要手动在字符之间插入空格（<strong>需注意</strong>：虽 Word 等文字处理软件会自动调整中西文字符之间的间距，但是并不会在微信公众号自带的编辑器中应用样式，而是直接堆在一起，所以需要手动再插入一次空格）。</p>
+        
+        <h4 id="间距">间距</h4>
+        
+        <p>中西文排版时，需要注意间距的处理，不能过于拥挤也不能过于疏松，此二者都会影响观感。</p>
+        
+        <h3 id="文本对齐">文本对齐</h3>
+        
+        <p>如无特别用途，文本全采左对齐处理，正文缩进两个字符左右，两端对齐不使用。</p>
+        
+        <h3 id="文本间距调整">文本间距调整</h3>
+        
+        <p>以下是行间、段间的间距调整要求：</p>
+        
+        <h4 id="行间距">行间距</h4>
+        
+        <p>行间距如无特别说明，均采用 1.5 倍间距，落款处（如有）用 1.0 倍间距。</p>
+        
+        <h4 id="段间距">段间距</h4>
+        
+        <p>段落间距只给出如下参考值：</p>
+        
+        <ul>
+            <li>段前间距：0~16 磅；</li>
+            <li>段后间距：8~16 磅。</li>
+        </ul>
+        
+        <div class="references">
+            <h3 id="参考文献">参考文献</h3>
+            
+            <ul>
+                <li>《重訂標點符號手冊》（2008年修訂版）— The Revised Handbook of Punctuation (2008 edition)</li>
+                <li>《标点符号用法》— General Rules for Punctuation (GB/T 15834—2011)</li>
+                <li>《出版物上数字用法》— General Rules for writing numerals in public texts (GB/T 15835—2011)</li>
+                <li>《國語注音符號手冊》— The Handbook of Mandarin Phonetic Symbols</li>
+                <li>《汉语拼音正词法基本规则》— Basic Rules for Chinese Phonetic Alphabet Orthography (GB/T 16159—2012)</li>
+                <li>《党政机关公文格式》— Layout key for official document of Party and government organs (GB/T 9704—2012)</li>
+                <li>《政府公文寫作手冊》— Guidebooks on Official Chinese Writing</li>
+                <li>The Unicode Standard</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
